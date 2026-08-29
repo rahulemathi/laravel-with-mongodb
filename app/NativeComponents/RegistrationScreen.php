@@ -5,6 +5,7 @@ namespace App\NativeComponents;
 use App\Concerns\PasswordValidationRules;
 use App\Concerns\ProfileValidationRules;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 use Native\Mobile\Edge\NativeComponent;
@@ -75,11 +76,20 @@ class RegistrationScreen extends NativeComponent
             return;
         }
 
-        User::create([
+        $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
             'password' => $this->password,
         ]);
+
+        Auth::login($user);
+        request()->session()->regenerate();
+        $this->replace('/mobile/welcome');
+    }
+
+    public function showLogin(): void
+    {
+        $this->replace('/mobile/login');
     }
 
     private function validateConfirmPassword(): void

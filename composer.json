@@ -13,13 +13,16 @@
         "laravel/chisel": "^0.1.0",
         "laravel/fortify": "^1.37.2",
         "laravel/framework": "^13.17",
+        "laravel/reverb": "^1.0",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^3.0",
         "livewire/blaze": "^1.0",
         "livewire/flux": "^2.13.1",
         "livewire/livewire": "^4.1",
         "mongodb/laravel-mongodb": "^5.9",
         "nativephp/mobile": "^4.2",
-        "nativephp/mobile-ui": "^0.4.0"
+        "nativephp/mobile-ui": "^0.4.0",
+        "nativephp/mobile-vibe": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.24",

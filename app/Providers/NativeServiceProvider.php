@@ -35,6 +35,8 @@ class NativeServiceProvider extends ServiceProvider
     {
         return [
             \Native\Mobile\UI\NativeUIServiceProvider::class,
+            \NativePHP\Vibe\VibeServiceProvider::class,
+        
         
         ];
     }

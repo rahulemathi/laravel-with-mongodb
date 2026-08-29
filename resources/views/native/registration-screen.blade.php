@@ -54,7 +54,8 @@
         secure="true">
         </native:outlined-text-input>
 
-        <native:button class="w-full" label="register" variant="primary" @press="register" /> 
+        <native:button class="w-full" label="Register" variant="primary" @press="register" />
+        <native:button class="w-full" label="Already have an account? Log in" variant="secondary" @press="showLogin" />
     </native:column>
 
 </native:refreshable>
